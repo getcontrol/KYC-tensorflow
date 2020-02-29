@@ -1,6 +1,6 @@
 # Machine Learning Driven Identity Verification
 
-This repo contains a Jupyter Notebook that utilizes a Tensorflow Model to identity and smartly crop an Identity Card, along with an accompanying Flask asp.
+This repo contains a Jupyter Notebook that utilizes a Tensorflow Model to identity and smartly crop an Identity Card, along with an accompanying Flask app. The model was trained using the MIDV-500 dataset.
 
 # Installation Instructions
 
