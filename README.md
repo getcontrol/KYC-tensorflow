@@ -52,6 +52,12 @@ You must take a photo of ID card in Step 2 and selfie in Step 3 or app will brea
 
 5. Test ngrok URL on mobile browser. Final ID image is saved in tmp/FINAL.jpg
 
+#TODO
+1. Deploy Flask app & model to production (GCP)
+2. Connect Step 1 form to database
+3. Send app-final.jpg to Nanonets API and save JSON response to database
+4. Send app-img_self.jpg to Face++ API and save JSON response to database
+
 ### References
 (https://github.com/RRanddom/tf_doc_localisation)
 
