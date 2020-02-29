@@ -7,36 +7,54 @@ This repo contains a Jupyter Notebook that utilizes a Tensorflow Model to identi
 ### Jupyter Notebook
 
 1. Create and activate a Python 3 Virtual environment
-python3 -m venv env
-source env/bin/activate
+
+```python3 -m venv env```
+
+```source env/bin/activate```
+
 2. Install Requirements
-pip install -r requirements.txt
+
+```pip install -r requirements.txt```
+
 3. Start Jupyter Notebook
-ipython notebook --ip=127.0.0.1
+
+```ipython notebook --ip=127.0.0.1```
+
 4. Open & Run Tensorflow - Verification.ipynb
+
 The mechanics of the Tensorflow model and OpenCV transforms is documented inline.
 
-###Flask App
+### Flask App
 This demonstrates uploading the  identity document via a Flask app with the relevant pre-processing OpenCV steps. The machine learning model is optimized for images that are acquired via an Android or Samsung Phone. Use ngrok to share localhost URL for mobile browser testing.
 
 Notes:
+
 The Step 1 Form and Step 3 selfie or not fully functioning yet.
 You must take a photo of ID card in Step 2 and selfie in Step 3 or app will break.
 
 1. Create and activate a Python 3 Virtual environment
-python3 -m venv env
-source env/bin/activate
+
+```python3 -m venv env```
+
+```source env/bin/activate```
+
 2. Install Requirements
-pip install -r requirements.txt
+
+```pip install -r requirements.txt```
+
 3. Start Flask app
-python app.py
+
+```python app.py```
+
 4. In a separate terminal tab start ngrok
-./ngrok http 5000
+
+```./ngrok http 5000```
+
 5. Test ngrok URL on mobile browser. Final ID image is saved in tmp/FINAL.jpg
 
 ### References
-https://github.com/RRanddom/tf_doc_localisation
-https://github.com/AdivarekarBhumit/ID-Card-Segmentation
+(https://github.com/RRanddom/tf_doc_localisation)
+[https://github.com/AdivarekarBhumit/ID-Card-Segmentation]
 https://zhuanlan.zhihu.com/p/56336225
 
 ### Citation
