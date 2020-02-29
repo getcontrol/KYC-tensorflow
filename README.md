@@ -30,7 +30,10 @@ This demonstrates uploading the  identity document via a Flask app with the rele
 Notes:
 
 The Step 1 Form and Step 3 selfie or not fully functioning yet.
+
 You must take a photo of ID card in Step 2 and selfie in Step 3 or app will break.
+
+App.py behaves very similarily to the Jupyter Notebook , with a few exceptions documented as comments in the code.
 
 1. Create and activate a Python 3 Virtual environment
 
