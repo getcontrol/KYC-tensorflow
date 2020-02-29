@@ -20,7 +20,7 @@ This repo contains a Jupyter Notebook that utilizes a Tensorflow Model to identi
 
 ```ipython notebook --ip=127.0.0.1```
 
-4. Open & Run Tensorflow - Verification.ipynb
+4. Open & Run [Tensorflow - Verification.ipynb](https://github.com/getcontrol/tensorflow-verification/blob/master/Tensorflow%20-%20Verification.ipynb)
 
 The mechanics of the Tensorflow model and OpenCV transforms is documented inline.
 
@@ -54,8 +54,10 @@ You must take a photo of ID card in Step 2 and selfie in Step 3 or app will brea
 
 ### References
 (https://github.com/RRanddom/tf_doc_localisation)
-[https://github.com/AdivarekarBhumit/ID-Card-Segmentation]
-https://zhuanlan.zhihu.com/p/56336225
+
+(https://github.com/AdivarekarBhumit/ID-Card-Segmentation)
+
+(https://zhuanlan.zhihu.com/p/56336225)
 
 ### Citation
 Please cite this paper, if using midv dataset, link for dataset provided in paper
