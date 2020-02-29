@@ -1,0 +1,388 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'helvetica', sans-serif;
+    font-weight: light;
+    background: linear-gradient(to top, #4f6072, #8699aa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7F8FA4;
+}
+
+.upload {
+    position: relative;
+    width: 350px;
+    min-height: 500px;
+    max-height: 500px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 12px 28px 0 rgba(0,0,0,0.50);
+    background: #101519;
+    -webkit-animation: fadeup .5s .5s ease both;
+    animation: fadeup .5s .5s ease both;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.upload .upload-files header {
+    background: #000000;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+    margin-top: 10;
+    padding: 25px 0;
+}
+
+.upload .upload-files .body {
+    text-align: center;
+    padding: 50px 0;
+    padding-bottom: 30px;
+}
+
+.upload .upload-files .body i {
+    font-size: 65px;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.btn {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 20px 20px;
+    border-radius: 70px;
+    font-size: 75px;
+    font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.upload .upload-files .body p {
+    font-size: 14px;
+    padding-top: 15px;
+    line-height: 1.4;
+    bottom: 0;
+    position: ab;
+    color: #ffffff;
+}
+
+.upload .upload-files {
+    background: #000000;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 20px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5.0rem;
+}
+
+imagediv {
+    float: left;
+    margin-top: 50px;
+}
+
+.imagediv .showonhover {
+    background: red;
+    padding: 20px;
+    opacity: 0.9;
+    color: white;
+    width: 100%;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*progressbar*/
+#progressbar {
+    overflow: hidden;
+
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+
+#progressbar li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style-type: none;
+    color: #7f8fa4;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 25%;
+    float: left;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    height: 24px;
+    line-height: 26px;
+    display: block;
+    font-size: 12px;
+    color: #333;
+    background: white;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #ee0979;
+    color: white;
+}
+
+/*form styles*/
+#msform {
+    text-align: center;
+    position: relative;
+}
+
+#msform fieldset {
+    background: rgba(0, 0, 0, 0);
+    border: 0 none;
+    border-radius: 0px;
+
+    /*box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4)*/
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100%;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*inputs*/
+#msform input,
+#msform textarea {
+    padding: 10px;
+    border: 1px solid #273142;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 70%;
+    box-sizing: border-box;
+    font-family: arial;
+    background-color: #222c3c;
+    color: #7f8fa4;
+    font-size: 11px;
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: .5px solid #4eb8ea;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+#msform .action-button {
+    width: 100px;
+    background: #ee0979;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 2px 5px;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px #c73363, 0 0 0 3px #c73363;
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: rgba(34,44,60,0.20);
+    font-weight: bold;
+    color: white;
+    border: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 2px 5px;
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px #222c3c, 0 0 0 3px #222c3c;
+}
+
+@keyframes fadeup {
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+input,
+textarea {
+    font: helvetica;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #FFF;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #FFF;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #FFF;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #FFF;
+}
+
+.footer {
+    height: 50px;
+    margin-top: -50px;
+}
+
+.foot {
+    margin-top: 10px;
+}
+
+.fileContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.fileContainer [type=file] {
+    cursor: inherit;
+    display: block;
+    font-size: 999px;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+}
+
+.fa-beat {
+    -webkit-animation: fa-beat 1s infinite linear;
+    animation: fa-beat 1s infinite linear;
+    margin: 20px;
+}
+
+@-webkit-keyframes fa-beat {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes fa-beat {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.image-embed {
+    margin: 20px;
+}
+
+.submit-button {
+    width: 100px !important;
+    background-color: #4EB8EA !important;
+    font-weight: bold !important;
+    color: white !important;
+    border: 2px !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    padding: 10px 5px !important;
+    margin: 2px 5px !important;
+}
+
+.result {
+    position: relative;
+    width: 800px;
+    min-height: 500px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 12px 28px 0 rgba(0,0,0,0.50);
+    background: #101519;
+    -webkit-animation: fadeup .5s .5s ease both;
+    animation: fadeup .5s .5s ease both;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+}

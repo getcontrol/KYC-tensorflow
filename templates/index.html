@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Acquaint Instant ID Verification</title>
+        <script src="https://kit.fontawesome.com/076a972d20.js" crossorigin="anonymous"></script>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300'>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body>
+        <!-- partial:index.partial.html -->
+        <form id="msform" action="
+      {{ url_for('upload_image_file') }}" method="POST" enctype="multipart/form-data">
+            <div class="upload upload-files">
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="active">Details</li>
+                    <li>ID Card</li>
+                    <li>Selfie </li>
+                </ul>
+                <fieldset>
+                    <input class="form-control" input type="text" name="name" placeholder="First Name"/>
+                    <input class="form-control" input type="text" name="lname" placeholder="Last Name"/>
+                    <input class="form-control" input type="text" name="street" placeholder="Street"/>
+                    <input class="form-control" input type="text" name="city" placeholder="City"/>
+                    <input class="form-control" input type="text" name="state" placeholder="Province"/>
+                    <input class="form-control" input type="text" name="state" placeholder="Postal"/>
+                    <input class="form-control" input type="text" name="state" placeholder="Phone"/>
+                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                    <input type="button" name="next" class="next action-button" value="Next"/>
+                </fieldset>
+                <fieldset>
+                    <p class="pointer-none"> <img src="../static/dl.svg" class="image-embed"><br> <label class="fileContainer">
+                            <i class="fas fa-camera fa-3x fa-beat"></i>
+                            <input type="file" accept="image/*" capture="capture" name="file"/>
+                        </label></p>
+                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                    <input type="button" name="next" class="next action-button" value="Next"/>
+                </fieldset>
+                <fieldset>
+                    <p class="pointer-none"> <img src="../static/selfie.svg"><br> <label class="fileContainer">
+                            <i class="fas fa-camera fa-3x fa-beat"></i>
+                            <input type="file" accept="image/*" capture="capture" name="photo"/>
+                        </label></p>
+                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                    <input type="submit" value="Submit" class="submit-button"/>
+                </fieldset>
+            </div>
+            <footer class="foot">
+</footer>
+        </form>
+    </body>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+    <script src="../static/script.js"></script>
+</html>
