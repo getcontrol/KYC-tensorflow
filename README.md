@@ -1,22 +1,22 @@
 # Machine Learning Driven Identity Verification
 
-This repo contains a Jupyter Notebook that utilizes a Tensorflow Model to identity and smartly crop an Identity Card, along with an accompanying Flask app. The model was trained using a specially formatted version of the the MIDV-500 dataset where the images were converted from TIF to JPG and the extraneous metadata removed. This model also works for isolating and cropping photos of receipts as well. To learn how to train the model see repo [KYC-train-model](https://github.com/getcontrol/KYC-train-model/).
+This repo contains a Jupyter Notebook that utilizes a Tensorflow Model to identity and smartly crop an Identity Card, along with an accompanying Flask app. The model was trained using a specially formatted version of the the MIDV-500 dataset where the images were converted from TIF to JPG and the extraneous metadata in the annotations removed. This model also works for isolating and cropping photos of paper receipts and possibly any conceivable rectangular images. To learn how to train the model see repo [KYC-train-model](https://github.com/getcontrol/KYC-train-model/).
 
 # Installation Instructions
 
 ### Jupyter Notebook
 
-1. Create and activate a Python 3 Virtual environment
+1. Create and activate a Python 3 Virtual environment.
 
 ```python3 -m venv env```
 
 ```source env/bin/activate```
 
-2. Install Requirements
+2. Install Requirements.
 
 ```pip install -r requirements.txt```
 
-3. Start Jupyter Notebook
+3. Start Jupyter Notebook.
 
 ```ipython notebook --ip=127.0.0.1```
 
@@ -35,25 +35,25 @@ You must take a photo of ID card in Step 2 and selfie in Step 3 or app will brea
 
 App.py behaves very similarily to the Jupyter Notebook , with a few exceptions documented as comments in the code.
 
-1. Create and activate a Python 3 Virtual environment
+1. Create and activate a Python 3 Virtual environment.
 
 ```python3 -m venv env```
 
 ```source env/bin/activate```
 
-2. Install Requirements
+2. Install Requirements.
 
 ```pip install -r requirements.txt```
 
-3. Start Flask app
+3. Start Flask app.
 
 ```python app.py```
 
-4. In a separate terminal tab start ngrok
+4. In a separate terminal tab start ngrok.
 
 ```./ngrok http 5000```
 
-5. Test ngrok URL on mobile browser. Final ID image is saved in tmp/FINAL.jpg
+5. Test ngrok URL on mobile browser. Final ID image is saved in tmp/FINAL.jpg.
 
 ![Results](https://github.com/getcontrol/KYC-tensorflow/blob/master/results.png)
 
