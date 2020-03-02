@@ -1,6 +1,6 @@
 # Machine Learning Driven Identity Verification
 
-This repo contains a Jupyter Notebook that utilizes a Tensorflow Model to identity and smartly crop an Identity Card, along with an accompanying Flask app. The model was trained using a specially formatted version of the the MIDV-500 dataset where the images were converted from TIF to JPG and the extraneous metadata removed. This model also works for isolating and cropping photos of receipts as well.
+This repo contains a Jupyter Notebook that utilizes a Tensorflow Model to identity and smartly crop an Identity Card, along with an accompanying Flask app. The model was trained using a specially formatted version of the the MIDV-500 dataset where the images were converted from TIF to JPG and the extraneous metadata removed. This model also works for isolating and cropping photos of receipts as well. To learn how to train the model see here https://github.com/getcontrol/KYC-train-model/
 
 ## Train the Model
 
@@ -58,11 +58,13 @@ App.py behaves very similarily to the Jupyter Notebook , with a few exceptions d
 
 5. Test ngrok URL on mobile browser. Final ID image is saved in tmp/FINAL.jpg
 
+![Results](https://github.com/getcontrol/KYC-tensorflow/blob/master/results.png)
+
 #TODO
-1. Deploy Flask app & model to production (GCP)
-2. Connect Step 1 form to database
-3. Send app-final.jpg to Nanonets API and save JSON response to database
-4. Send app-img_self.jpg to Face++ API and save JSON response to database
+
+1. Connect Step 1 form to database
+2. OCR ID Card and save JSON results to database
+3. Compare ID Card image with selfie and save JSON results to database
 
 
 ### Citation
