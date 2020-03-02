@@ -62,6 +62,7 @@ App.py behaves very similarily to the Jupyter Notebook , with a few exceptions d
 1. Connect Step 1 form to database
 2. OCR ID Card and save JSON results to database
 3. Compare ID Card image with selfie and save JSON results to database
+4. Compare form submission and OCR results.
 
 
 ### Citation
