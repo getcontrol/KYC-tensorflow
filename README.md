@@ -2,9 +2,6 @@
 
 This repo contains a Jupyter Notebook that utilizes a Tensorflow Model to identity and smartly crop an Identity Card, along with an accompanying Flask app. The model was trained using a specially formatted version of the the MIDV-500 dataset where the images were converted from TIF to JPG and the extraneous metadata removed. This model also works for isolating and cropping photos of receipts as well. To learn how to train the model see repo [KYC-train-model](https://github.com/getcontrol/KYC-train-model/).
 
-## Train the Model
-
-
 # Installation Instructions
 
 ### Jupyter Notebook
