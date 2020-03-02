@@ -1,6 +1,9 @@
 # Machine Learning Driven Identity Verification
 
-This repo contains a Jupyter Notebook that utilizes a Tensorflow Model to identity and smartly crop an Identity Card, along with an accompanying Flask app. The model was trained using the MIDV-500 dataset.
+This repo contains a Jupyter Notebook that utilizes a Tensorflow Model to identity and smartly crop an Identity Card, along with an accompanying Flask app. The model was trained using a specially formatted version of the the MIDV-500 dataset where the images were converted from TIF to JPG and the extraneous metadata removed. This model also works for isolating and cropping photos of receipts as well.
+
+## Train the Model
+
 
 # Installation Instructions
 
@@ -61,12 +64,6 @@ App.py behaves very similarily to the Jupyter Notebook , with a few exceptions d
 3. Send app-final.jpg to Nanonets API and save JSON response to database
 4. Send app-img_self.jpg to Face++ API and save JSON response to database
 
-### References
-(https://github.com/RRanddom/tf_doc_localisation)
-
-(https://github.com/AdivarekarBhumit/ID-Card-Segmentation)
-
-(https://zhuanlan.zhihu.com/p/56336225)
 
 ### Citation
 Please cite this paper, if using midv dataset, link for dataset provided in paper
